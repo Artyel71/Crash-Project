@@ -18,4 +18,16 @@ public class CrashProjectServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxMaxInMiddle() {
+        CrashProjectService service = new CrashProjectService();
+
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 50, 6, 11, 11, 12};
+        long expected = 50;
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
